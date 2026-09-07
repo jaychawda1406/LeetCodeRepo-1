@@ -18,6 +18,7 @@ public:
         while(!s.empty()){
             s.pop();
         }
+
         // left smaller
         for(int i=0; i<n; i++){
             while(s.size() > 0 && heights[s.top()] >=  heights[i]){
@@ -29,7 +30,7 @@ public:
         int ans = 0;
         for(int i=0; i<n; i++){
             int width = right[i]-left[i]-1;
-            int currArea = heights[i] *width;
+            int currArea = heights[i] * width;
             ans = max(ans,currArea);
         }
         return ans; 
